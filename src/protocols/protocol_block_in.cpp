@@ -477,8 +477,8 @@ inline bool enabled(size_t height)
 {
     // Vary the reporting performance reporting interval by height.
     const auto modulus =
-        (height < 100000 ? 100 :
-        (height < 200000 ? 10 : 1));
+        (height < 200000 ? 100 :
+        (height < 400000 ? 10 : 1));
 
     return height % modulus == 0;
 }
